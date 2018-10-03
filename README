@@ -1,0 +1,20 @@
+This is a distributed file system implemeted using GO language
+
+Design
+
+File structure:
+- admin.go: Contains main function for automating tests
+- client.go: Defines client APIs: get and put
+- proxy.go: Contains logic for creating allocation scheme and request redirection
+- server.go: Handles storing and retrieving data
+- utility.go: Contains types
+
+Features:
+1. All communications are using JSON and HTTP
+2. Implemented uniform data distribution algorithm
+    Example: number of nodes: 3, the value size: 11 bytes, the allocation scheme: [4,3,4].
+    The two extra bytes are allocated to two of nodes at random.
+3. Automated testing using admin.go
+
+How to run:
+In command, type go build && ./HW6 to run the program
